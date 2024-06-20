@@ -1,14 +1,14 @@
 // create web server
 
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const url = require('url');
-const qs = require('querystring');
+import http from 'http';
+import fs from 'fs';
+import url from 'url';
+import qs from 'querystring';
+
 const comments = [];
+
 http.createServer((req, res) => {
     const parseUrl = url.parse(req.url);
-    const parseQuery = qs.parse(parseUrl.query);
     const pathname = parseUrl.pathname;
     if (pathname === '/') {
         fs.readFile('./index.html', (err, data) => {
