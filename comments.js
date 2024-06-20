@@ -1,4 +1,4 @@
-// create web server
+// Create web server
 
 import http from 'http';
 import fs from 'fs';
